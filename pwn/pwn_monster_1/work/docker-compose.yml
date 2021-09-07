@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  pwn_monster_1:
+    build:
+      context: '.'
+      args:
+        - BINARY_NAME=vuln
+    image: 'pwn_monster_1_image'
+    container_name: 'pwn_monster_1'
+    ports:
+      # - '9001:9999/tcp'
+      - '127.0.0.1:9001:9999/tcp'
